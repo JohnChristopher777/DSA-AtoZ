@@ -5,6 +5,9 @@ build/
 target/
 *.class
 
+# Practice I/O folder
+src/io/
+
 # Eclipse / Java IDE metadata
 .classpath
 .project
