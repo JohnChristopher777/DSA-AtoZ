@@ -16,11 +16,11 @@ public class freqhash {
             int count = 1;
             for (int j = i+1; j < n; j++) {
                 if (arr[i] == arr[j]) {
-                    visited[i] = true;
+                    visited[j] = true;
                     count++;
                 }
             }
-            System.out.println(arr[i] + " : "+ count);
+            System.out.println(arr[i] + " : appeared "+ count + " time/times");
         }
         
 
