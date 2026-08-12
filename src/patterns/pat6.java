@@ -63,13 +63,13 @@ public class pat6 { //pattern 15,16,17 and 18
 
         public static void main(String[] args) {
         pat6 p = new pat6();
-        Scanner s = new Scanner(System.in);
-        int N = s.nextInt();
-        //p.ARAT(N);
-        //p.IARAT(N);
-        //p.AiRAT(N);  
-        //p.eql(N);
-        p.ERAT(N);
-        s.close();
+        try (Scanner s = new Scanner(System.in)) {
+            int N = s.nextInt();
+            //p.ARAT(N);
+            //p.IARAT(N);
+            //p.AiRAT(N);
+            //p.eql(N);
+            p.ERAT(N);
+        }
     }   
 }
