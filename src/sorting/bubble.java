@@ -5,23 +5,44 @@ import java.util.*;
 public class bubble{
     public void maxadj(int[] arr, int n) {
         for (int i = n - 1; i >= 0; i--) {
-            int didSwap = 0;        //optimized to get O(N)
-            for (int j = 0; j <= i-1 ; j++) {
+            int didSwap = 0; //optimized to get O(N)
+            for (int j = 0; j <= i - 1; j++) {
                 if (arr[j] > arr[j + 1]) {
                     int temp = arr[j + 1];
                     arr[j + 1] = arr[j];
                     arr[j] = temp;
                     didSwap = 1;
                 }
-                
             }
             if (didSwap == 0) {
                 break;
             }
             System.out.println("Swap happened");
         }
-            System.out.print(Arrays.toString(arr));
-    } 
+        System.out.print(Arrays.toString(arr));
+    }
+    
+    public void recbub(int [] arr, int n) {
+        if (n == 1)
+            return;
+
+        boolean didswap = false;
+        
+        for (int j = 0; j <= n - 2; j++) {
+            if (arr[j] > arr[j + 1]) {
+                int temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+                didswap = true;
+            }
+        }
+        
+        if (!didswap)
+            return;
+
+        recbub(arr, n-1); 
+        
+    }
 
 
     public static void main(String[] args) {
@@ -34,7 +55,11 @@ public class bubble{
             }
 
             bubble obj = new bubble();
-            obj.maxadj(arr, n);
+            // obj.maxadj(arr, n);
+
+            obj.recbub(arr, n);
+            
+            System.out.println(Arrays.toString(arr));
         }
     }
 }
