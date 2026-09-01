@@ -4,6 +4,7 @@ import java.util.*;
 
 public class quick {
     public int part(int[] a, int low, int high) {
+        //Lomuto
         int pivot = a[high];
         int i = low - 1;
         
@@ -20,7 +21,34 @@ public class quick {
         a[i + 1] = a[high];
         a[high] = temp;
 
-        return i+1;
+        return i + 1;
+        
+        //Hoare
+        // int pivot = a[low]; 
+        // int i = low;        
+        // int j = high;
+        
+        // while (i < j) {
+        //     while (i <= high && a[i] <= pivot) { 
+        //         i++;
+        //     }
+
+        //     while (j >= low && a[j] > pivot) {
+        //         j--;
+        //     }
+
+        //     if (i < j) {
+        //         int temp = a[i];
+        //         a[i] = a[j];
+        //         a[j] = temp;
+        //     }
+        // }
+    
+        //     int temp = a[low];
+        //     a[low] = a[j];
+        //     a[j] = temp;
+
+        //     return j; 
     }
 
     public void qs(int[] a, int low, int high) {
