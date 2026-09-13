@@ -14,6 +14,7 @@ This repository contains my Striver A to Z DSA practice work.
 - `src/hashing/` - hashing practice
 - `src/patterns/` - pattern printing problems
 - `src/recursion/` - recursion practice
+- `src/arrays/easy` - array easy problem practice
 
 
 ## Notes
